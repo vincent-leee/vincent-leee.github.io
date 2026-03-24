@@ -277,18 +277,7 @@ NexT.utils = {
         return index === 0 ? 0 : index - 1;
       }
       for (; index < entries.length; index++) {
-        if (entries[index].boundingClientRect.top <= 0) {
-          entry = entries[index];
-        } else {
-          return sections.indexOf(entry.target);
-        }
-      }
-      return sections.indexOf(entry.target);
-    }
-
-    function createIntersectionObserver(marginTop) {
-      marginTop = Math.floor(marginTop + 10000);
-      let intersectionObserver = new IntersectionObserver((entries, observe) => {
+        if (entries[index].boundingClientRect.top <= 0) { entry="entries[index];" } else return sections.indexof(entry.target); function createintersectionobserver(margintop) margintop="Math.floor(marginTop" + 10000); let intersectionobserver="new" intersectionobserver((entries, observe)> {
         let scrollHeight = document.documentElement.scrollHeight + 100;
         if (scrollHeight > marginTop) {
           observe.disconnect();
@@ -403,3 +392,4 @@ NexT.utils = {
     }
   }
 };
+</=>

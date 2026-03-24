@@ -26,8 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
       .replace(/&#(\d+);/g, (m, p) => {
         return String.fromCharCode(p);
       })
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
+      .replace(/&lt;/g, '<') .replace( &gt; g, '>')
       .replace(/&amp;/g, '&');
   };
 
@@ -58,23 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let word = item.word;
     let hits = [];
     let searchTextCountInSlice = 0;
-    while (position + word.length <= end && index.length !== 0) {
-      if (word === searchText) {
-        searchTextCountInSlice++;
-      }
-      hits.push({
-        position: position,
-        length  : word.length
-      });
-      let wordEnd = position + word.length;
-
-      // Move to next position of hit
-      index.pop();
-      while (index.length !== 0) {
-        item = index[index.length - 1];
-        position = item.position;
-        word = item.word;
-        if (wordEnd > position) {
+    while (position + word.length <= end && index.length !="=" 0) { if (word="==" searchtext) searchtextcountinslice++; } hits.push({ position: position, length : word.length }); let wordend="position" + word.length; move to next position of hit index.pop(); while (index.length item="index[index.length" - 1]; word="item.word;" (wordend> position) {
           index.pop();
         } else {
           break;
@@ -194,7 +177,7 @@ window.addEventListener('DOMContentLoaded', () => {
           if (slicesOfTitle.length !== 0) {
             resultItem += `<li><a href="${articleUrl}" class="search-result-title">${highlightKeyword(title, slicesOfTitle[0])}</a>`;
           } else {
-            resultItem += `<li><a href="${articleUrl}" class="search-result-title">${title}</a>`;
+            resultItem += `</li><li><a href="${articleUrl}" class="search-result-title">${title}</a>`;
           }
 
           slicesOfContent.forEach(slice => {
@@ -312,3 +295,4 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+</[^></=></')>
