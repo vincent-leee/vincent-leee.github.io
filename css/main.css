@@ -1148,7 +1148,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #6e2aa2;
+  background: #ff16b0;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2270,7 +2270,6 @@ embed {
   transition: all 0.4s;
   width: 320px;
 }
-/*     Links    */
 .text_link_tit {
   margin-bottom: 10px;
   text-align: left;
@@ -2306,16 +2305,21 @@ embed {
   -ms-animation-fill-mode: both;
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-duration: 0s;
-  -moz-animation-duration: 0s;
-  -ms-animation-duration: 0s;
-  -o-animation-duration: 0s;
-  animation-duration: 0s;
   -webkit-animation-duration: 0.7s;
   -moz-animation-duration: 0.7s;
   -ms-animation-duration: 0.7s;
   -o-animation-duration: 0.7s;
   animation-duration: 0.7s;
+}
+.text_link ul li img:hover {
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -o-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  -moz-animation-name: swing;
+  -o-animation-name: swing;
+  animation-name: swing;
 }
 .text_link ul li p {
   margin: 0px 0px 10px;
@@ -2374,15 +2378,26 @@ embed {
     -o-transform: rotate(0deg);
   }
 }
-.text_link ul li img:hover {
-  -webkit-transform-origin: top center;
-  -moz-transform-origin: top center;
-  -o-transform-origin: top center;
-  transform-origin: top center;
-  -webkit-animation-name: swing;
-  -moz-animation-name: swing;
-  -o-animation-name: swing;
-  animation-name: swing;
+.sidebar {
+  transition: all 0.4s;
+  width: 320px;
+}
+.book-mark-link {
+  left: 30px;
+}
+@media (max-width: 991px) {
+  .sidebar-toggle,
+  .back-to-top {
+    right: 20px;
+  }
+}
+img.custom-logo-image {
+  max-width: 100px;
+  border-radius: 50%;
+  transition: transform 1s ease-out;
+}
+img.custom-logo-image:hover {
+  transform: rotateZ(360deg);
 }
 @-moz-keyframes swing {
   20% {
