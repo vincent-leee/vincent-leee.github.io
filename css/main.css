@@ -1148,7 +1148,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffff42;
+  background: #c3d0c6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2405,6 +2405,13 @@ img.custom-logo-image:hover {
   background-size: 100% 100%;
   padding-top: 78px;
   height: 248px;
+}
+body .header-inner {
+  background-image: url("../images/body_tou.gif") !important;
+  background-repeat: repeat-x !important;
+  background-size: 100% 100% !important;
+  padding-top: 78px !important;
+  height: 248px !important;
 }
 @-moz-keyframes swing {
   20% {
