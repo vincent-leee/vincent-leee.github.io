@@ -22,7 +22,14 @@ var Affix = {
     let targetHeight = window.innerHeight;
     if (offsetTop != null && this.affixed === 'top') return scrollTop < offsetTop ? 'top' : false;
     if (this.affixed === 'bottom') {
-      if (offsetTop != null) return this.unpin <= this.element.getboundingclientrect().top ? false : 'bottom'; return scrolltop + targetheight <="scrollHeight" - offsetbottom } let initializing="this.affixed" =="=" null; collidertop="initializing" scrolltop; colliderheight="initializing" height; if (offsettop !="null" && 'top'; (offsetbottom (collidertop>= scrollHeight - offsetBottom)) return 'bottom';
+      if (offsetTop != null) return this.unpin <= this.element.getBoundingClientRect().top ? false : 'bottom';
+      return scrollTop + targetHeight <= scrollHeight - offsetBottom ? false : 'bottom';
+    }
+    let initializing = this.affixed === null;
+    let colliderTop = initializing ? scrollTop : this.element.getBoundingClientRect().top + scrollTop;
+    let colliderHeight = initializing ? targetHeight : height;
+    if (offsetTop != null && scrollTop <= offsetTop) return 'top';
+    if (offsetBottom != null && (colliderTop + colliderHeight >= scrollHeight - offsetBottom)) return 'bottom';
     return false;
   },
   getPinnedOffset: function() {
@@ -77,4 +84,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
   Affix.init(document.querySelector('.sidebar-inner'), NexT.utils.getAffixParam());
 });
-</=>
